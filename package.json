@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cookie-session": "^2.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  },
+  "name": "registration-authentication",
+  "description": "Project creating a registration page and authenticating the user.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavenSantana/Registration-Authentication.git"
+  },
+  "author": "Daven Santana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavenSantana/Registration-Authentication/issues"
+  },
+  "homepage": "https://github.com/DavenSantana/Registration-Authentication#readme"
+}
