@@ -7,11 +7,12 @@ module.exports = () => {
 		return res.render("login");
 	});
 
-	router.post("/login", (req, res) => { 
+	router.post("/", (req, res) => { 
+        
+		let email = req.body.emailAddressLogin;
+        let password = req.body.passwordLogin;
 
-        // Handle login form here
-        // All logic will be done in database file that handles login, just use functions
-        // directly from that file
+		res.redirect("/");
 
     });
     

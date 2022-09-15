@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 require("mongoose-type-email");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const saltRounds = 12;
 
@@ -14,6 +14,7 @@ const userSchema = new Schema({
 });
 
 userSchema.pre("save", async function preSave(next) {
+	
 	const user = this;
 
 	if (!user.isModified("password")) return next();
@@ -27,6 +28,4 @@ userSchema.pre("save", async function preSave(next) {
 	}
 });
 
-const User = mongoose.model("User", userSchema);
-
-module.exports = { User };
+module.exports = mongoose.model("User", userSchema);
