@@ -70,6 +70,7 @@ signupForm.addEventListener("submit", (e) => {
 // When a user closes the error popup, this resets it so it can pop up again without having to refresh
 
 // First name errors
+
 document.getElementById("firstNameClose").addEventListener("click", () => {
 	document.getElementById("firstNameError").setAttribute("hidden", "hidden");
 });
