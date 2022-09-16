@@ -11,17 +11,19 @@
                 <a class="nav-item nav-link" href="/login">Login</a>
             </div>
         </nav>
+        
+        <%- include ('./partials/signupErrors.ejs') %>
 
-
-        <div class="d-flex align-items-center h-100 mt-5">
+        <div id="table" class="d-flex align-items-center h-100 mt-5 mb-5">
             <div class="container h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card" style="border-radius: 15px;">
                             <div class="card-body p-5">
+                                
                                 <h2 class="text-uppercase text-center mb-5">Create an account</h2>
-
-                                <form method="post" action="/signup">
+                                
+                                <form id="signupForm" name="myForm" method="post" action="/signup">
 
                                     <div class="form-outline mb-4">
                                         <input type="text" id="firstNameSignup" name="firstNameSignup" class="form-control form-control-lg" />
@@ -38,10 +40,11 @@
                                         <label class="form-label" for="emailAddressSignup">Email</label>
                                     </div>
 
-                                    <div class="form-outline mb-4">
+                                    <div class="form-outline mb-3">
                                         <input type="password" id="passwordSignup" name="passwordSignup" class="form-control form-control-lg" />
                                         <label class="form-label" for="passwordSignup">Password</label>
                                     </div>
+                                    <p class="text-center text-danger">Passwords must be 8 characters long</p>
 
                                     <div class="form-outline mb-4">
                                         <input type="password" id="confirmPasswordSignup" name="confirmPasswordSignup" class="form-control form-control-lg" />
@@ -62,4 +65,5 @@
             </div>
         </div>
 
+<script src="../public/js/signupValidation.js"></script>
 <%- include ('./partials/footer.ejs') %>

@@ -1,10 +1,10 @@
 const database = require ('./database/database');
 const routes = require("./routes");
 const bodyParser = require ('body-parser');
-require("dotenv").config();
-
 const path = require("path");
 const express = require("express");
+const cookieParser = require("cookie-parser")
+require("dotenv").config();
 
 const app = express();
 
