@@ -67,7 +67,7 @@ module.exports = () => {
 				const savedUser = await newUser.save();
 
 				if (savedUser) {
-					 return res.redirect("/");
+					 return res.redirect("/login?success=true");
 				}
 
 				return next(new Error("Failed to save user for unknown reasons"));

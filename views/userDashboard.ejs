@@ -1,0 +1,25 @@
+<%- include ('./partials/heading.ejs') %>
+
+    <title>Dashboard</title>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand bg-secondary navbar-dark">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">Home</a>
+                <a class="nav-item nav-link active" href="/dashboard">Dashboard</a>
+                <a class="nav-item nav-link" href="/logout">Logout</a>
+            </div>
+        </nav>
+
+        <%- include ('./partials/userDashboardAlerts.ejs') %>
+
+        <%- userInfo %>
+
+<script>
+    document.getElementById("loginSuccessClose").addEventListener("click", () => {
+        document.location.href = '/dashboard';
+    });
+</script>
+<%- include ('./partials/footer.ejs') %>

@@ -12,7 +12,7 @@
             </div>
         </nav>
         
-        <%- include ('./partials/loginErrors.ejs') %>
+        <%- include ('./partials/loginAlerts.ejs') %>
 
         <div class="d-flex align-items-center h-100 mt-5">
             <div class="container h-100">
@@ -49,4 +49,9 @@
         </div>
 
 <script src="../public/js/loginValidation.js"></script>
+<script>
+    document.getElementById("signupSuccessClose").addEventListener("click", () => {
+        document.location.href = '/login';
+    });
+</script>
 <%- include ('./partials/footer.ejs') %>

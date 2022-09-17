@@ -4,13 +4,24 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand bg-secondary navbar-dark">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="/">Home</a>
-            <a class="nav-item nav-link" href="/signup">Signup</a>
-            <a class="nav-item nav-link" href="/login">Login</a>
-        </div>
-    </nav>
+
+    <% if(!userLoggedIn) { %>
+        <nav class="navbar navbar-expand bg-secondary navbar-dark">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/">Home</a>
+                <a class="nav-item nav-link" href="/signup">Signup</a>
+                <a class="nav-item nav-link" href="/login">Login</a>
+            </div>
+        </nav>
+    <% } else { %>
+        <nav class="navbar navbar-expand bg-secondary navbar-dark">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/">Home</a>
+                <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
+                <a class="nav-item nav-link" href="/logout">Logout</a>
+            </div>
+        </nav>
+    <% } %>
 
 
 <%- include ('./partials/footer.ejs') %>
