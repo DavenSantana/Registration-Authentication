@@ -1,0 +1,36 @@
+<%- include ('./partials/heading.ejs') %> 
+
+<title>404 Not Found</title>
+</head>
+
+<body>
+
+    <% if(!userLoggedIn) { %>
+        <nav class="navbar navbar-expand bg-secondary navbar-dark">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/">Home</a>
+                <a class="nav-item nav-link" href="/signup">Signup</a>
+                <a class="nav-item nav-link" href="/login">Login</a>
+            </div>
+        </nav>
+    <% } else { %>
+        <nav class="navbar navbar-expand bg-secondary navbar-dark">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/">Home</a>
+                <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
+                <a class="nav-item nav-link" href="/logout">Logout</a>
+            </div>
+        </nav>
+    <% } %>
+
+    <div class="d-flex justify-content-center mt-5">
+        <div class="text-center">
+            <h1 class="display-1 fw-bold">404</h1>
+            <p class="fs-3"> <span class="text-danger">Oops!</span> Page not found.</p>
+            <p class="lead">The page you’re looking for doesn’t exist.</p>
+            <a href="/" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Go Home</a>
+        </div>
+    </div>
+
+
+<%- include ('./partials/footer.ejs') %>

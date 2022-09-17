@@ -31,6 +31,12 @@ app.use(auth.setUser);
 
 app.use(routes());
 
+app.use(function(req, res, next) {
+	res.status(404);
+	return res.render('404', { userLoggedIn: req.user });
+});
+  
+
 app.listen(port, () => {
 	console.log(`Express listening on port:${port}`);
 });
