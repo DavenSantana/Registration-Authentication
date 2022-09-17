@@ -23,5 +23,31 @@
         </nav>
     <% } %>
 
+    <div class=" mx-auto text-center mt-5">
+        <h1 class="display-3">Registration and Authentication</h1>
+        <div class="w-75 mx-auto mt-5">
+            <p class="lead">
+                This project focuses on User registration, User login or Authentication. For registration, I used client side and server side validation to make sure these forms are 
+                submitted with valid information to avoid malicious users, users who might have forgot to fill out a field, or even if the email they used already exists. and uses MongoDB 
+                to store the information from users. To authenticate users the project uses Passport in combination with sessions to log a user in and this helps keep track of what the user 
+                is authorized to do. Although, I didn't call this project Registration-Authentication-Authorization since all users are authorized to do the same thing, login, view their 
+                dashboard and logout. If there were multiple users and these users had certain permissions then I would call that Authorization but, this project mainly focuses on the registration
+                and authentication of users.
+            </p>
+            <p class="lead">
+                This project was built in order for me to extend my knowledge on Node.js and its frameworks such as Express, Passport, Sessions and more. I had previously
+                created a project which had used Express and Cookie-Session for a basic website which included a Signup and Login but I passed the user through the pages while
+                using variables instead of the actual user object. My previous project also included MongoDB while using Mongoose to access it but I only used this to store
+                logins and not sessions like I did in this project. This project showed me how the way I previously was handling users and logins was not only incorrect but extremely
+                inefficient. Having a user stored inside of the session instead of inside of variables just makes it easier to pass the user through multiple pages and figure out
+                which pages a user should have access to and which ones a user should not have access to. Another thing I wanted to improve on from my old project was my file layout,
+                in my old project I had kept all of the routes inside the Express server file, my server.js file in this project. Obviously doing things with correct practice takes
+                longer but it also leads to a more organized and better file system which is something I definitely improved on from my previous project but can still improve on.
+            </p>
+            <p class="lead">
+                The technologies I used were : Express, Passport, MongoDB, Mongoose, Helmet, EJS and Bootstrap.
+            </p>
+        </div>
+    </div>
 
 <%- include ('./partials/footer.ejs') %>
