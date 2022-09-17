@@ -3,7 +3,7 @@ const signupForm = document.getElementById("signupForm");
 const emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 const nameRegex = /^[a-z ,.'-]+$/i;
 
-// Validates the form on the Client side, make sure all fields
+// Validates the form on the Client side, makes sure all fields are valid
 
 signupForm.addEventListener("submit", (e) => {
 

@@ -11,7 +11,8 @@
                 <a class="nav-item nav-link active" href="/login">Login</a>
             </div>
         </nav>
-
+        
+        <%- include ('./partials/loginErrors.ejs') %>
 
         <div class="d-flex align-items-center h-100 mt-5">
             <div class="container h-100">
@@ -21,7 +22,7 @@
                             <div class="card-body p-5">
                                 <h2 class="text-uppercase text-center mb-5">Login to your account</h2>
 
-                                <form method="post" action="/login">
+                                <form id="loginForm" method="post" action="/login">
 
                                     <div class="form-outline mb-4">
                                         <input type="email" id="emailAddressLogin" name = "emailAddressLogin" class="form-control form-control-lg" />
@@ -47,4 +48,5 @@
             </div>
         </div>
 
+<script src="../public/js/loginValidation.js"></script>
 <%- include ('./partials/footer.ejs') %>

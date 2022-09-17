@@ -7,7 +7,7 @@ const emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4}
 const nameRegex = /^[a-z ,.'-]+$/i;
 
 module.exports = () => {
-	router.get("/", (req, res) => {
+	router.get("/", redirectIfLoggedIn, (req, res) => {
 		return res.render("signup", { success: req.query.success });
 	});
 
@@ -85,4 +85,9 @@ module.exports = () => {
 
 function capitalizeFirstLetter(string) {
 	return string[0].toUpperCase() + string.slice(1).toLowerCase();
+}
+
+function redirectIfLoggedIn(req, res, next) {
+	if (req.user) return res.redirect('/');
+	return next();
 }
